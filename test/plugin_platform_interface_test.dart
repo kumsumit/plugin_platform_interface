@@ -46,13 +46,11 @@ class ImplementsSamplePluginPlatformUsingNoSuchMethod
 
 // #docregion Mock
 class SamplePluginPlatformMock extends Mock
-    with MockPlatformInterfaceMixin
-    implements SamplePluginPlatform {}
+    implements MockPlatformInterfaceMixin, SamplePluginPlatform {}
 // #enddocregion Mock
 
 class SamplePluginPlatformFake extends Fake
-    with MockPlatformInterfaceMixin
-    implements SamplePluginPlatform {}
+    implements MockPlatformInterfaceMixin, SamplePluginPlatform {}
 
 class ExtendsSamplePluginPlatform extends SamplePluginPlatform {}
 
@@ -86,8 +84,7 @@ class ImplementsVerifyTokenPluginPlatform extends Mock
 
 class ImplementsVerifyTokenPluginPlatformUsingMockPlatformInterfaceMixin
     extends Mock
-    with MockPlatformInterfaceMixin
-    implements VerifyTokenPluginPlatform {}
+    implements MockPlatformInterfaceMixin, VerifyTokenPluginPlatform {}
 
 class ExtendsVerifyTokenPluginPlatform extends VerifyTokenPluginPlatform {}
 
